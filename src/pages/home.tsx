@@ -1917,7 +1917,6 @@ function Footer() {
     <footer className="bg-foreground text-background pt-14 pb-24 md:pb-8 border-t-[6px] border-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-10">
-          <div className="text-secondary font-bold text-xl mb-5 tracking-widest font-hindi">|| श्री गणेशाय नमः ||</div>
           <img src={logoPath} alt="Logo" className="w-20 h-20 rounded-full border-2 border-secondary/60 mb-5 bg-white object-contain shadow-xl" />
           <h2 className="text-3xl font-serif font-bold text-white mb-1">ANNADATA AGRI & SEEDS</h2>
           <p className="text-secondary text-xl font-hindi font-semibold mb-2">जय जवान जय किसान</p>
