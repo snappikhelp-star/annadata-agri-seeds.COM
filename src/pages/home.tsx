@@ -469,7 +469,7 @@ function SmartFarmerHelpSection() {
 function CropDoctorSection() {
   const [selected, setSelected] = useState<number | null>(null);
   const problems = [
-    { emoji: "🍂", label: "पत्ता पीला पड़ रहा है", tip: "पोषक तत्वों की कमी या पत्ता पीलापन रोग हो सकता है। Zinc या Urea Spray + Fungicide की जरूरत है।" },
+    { emoji: "🍂", label: "पत्ते पीले पड़ रहे हैं। ", tip: "पोषक तत्वों की कमी या पत्ता पीलापन रोग हो सकता है। Zinc या Urea Spray + Fungicide की जरूरत है।" },
     { emoji: "🌱", label: "फसल की ग्रोथ रुक गई है", tip: "जड़ कमज़ोर हो सकती है या मिट्टी में NPK की कमी है। Growth Booster + Root Strengthener की जरूरत है।" },
     { emoji: "🐛", label: "कीड़ा लग गया है", tip: "रस चूसक कीट (BPH) या इल्ली हो सकती है। सही कीटनाशक की Spray जरूरी है — Keshav Bhai से पूछें।" },
     { emoji: "🍃", label: "रोग लग गया है", tip: "Blast, Sheath Blight या Bacterial Blight हो सकता है। तुरंत Fungicide Spray करें।" },
