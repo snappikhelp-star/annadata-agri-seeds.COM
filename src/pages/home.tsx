@@ -876,7 +876,7 @@ function DhanUthwaiSection() {
     setForm(f => ({ ...f, [e.target.name]: e.target.value }));
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const msg = `🚜 *धान घर से उठवाई Request — अन्नदाता*\n\n👤 नाम: ${form.name}\n📱 मोबाइल: ${form.mobile}\n🏡 गांव: ${form.village}\n⚖️ अनुमानित Quantity: ${form.qty}\n🗓️ कटाई कब होगी: ${form.harvest}\n\nकृपया उठवाई की व्यवस्था करें।`;
+    const msg = `🚜 *धान घर से धान उठवाना है। Request — अन्नदाता*\n\n👤 नाम: ${form.name}\n📱 मोबाइल: ${form.mobile}\n🏡 गांव: ${form.village}\n⚖️ अनुमानित Quantity: ${form.qty}\n🗓️ कटाई कब होगी: ${form.harvest}\n\nकृपया उठवाई की व्यवस्था करें।`;
     window.open(waLink(msg), "_blank");
     setSent(true);
     setTimeout(() => setSent(false), 4000);
@@ -919,7 +919,7 @@ function DhanUthwaiSection() {
           <motion.button type="submit" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}
             className="w-full flex items-center justify-center gap-3 py-4 bg-orange-500 text-white font-hindi font-black text-lg rounded-2xl hover:bg-orange-600 transition-all shadow-xl"
             style={{ boxShadow: "0 6px 24px rgba(249,115,22,0.4)" }}>
-            {sent ? "✅ WhatsApp खुल रहा है..." : <><FaWhatsapp className="w-6 h-6" /> Uthwai Request भेजें</>}
+            {sent ? "✅ WhatsApp खुल रहा है..." : <><FaWhatsapp className="w-6 h-6" /> धान उठाने के लिए Request भेजें</>}
           </motion.button>
         </motion.form>
       </div>
