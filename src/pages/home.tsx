@@ -396,14 +396,12 @@ function SmartFarmerHelpSection() {
 
   const problems = [
     { emoji: "🌾", label: "धान बीज चाहिए", color: "#22c55e" },
-    { emoji: "🌾", label: "1886 धान Variety चाहिए", color: "#16a34a" },
-    { emoji: "🌾", label: "PB1 धान चाहिए", color: "#15803d" },
     { emoji: "🗒️", label: "धान का प्रोजेक्ट कराना है", color: "#F9A825" },
     { emoji: "🌿", label: "धान की दवाई चाहिए", color: "#00897B" },
-    { emoji: "💦", label: "First Spray Guidance", color: "#26A69A" },
+    { emoji: "💦", label: "धान में पहला स्प्रे", color: "#26A69A" },
     { emoji: "🍂", label: "फसल में रोग लग गया", color: "#ef4444" },
     { emoji: "🌱", label: "खरपतवार नाशक चाहिए", color: "#84cc16" },
-    { emoji: "🚜", label: "घर से धान उठवाई", color: "#f97316" },
+    { emoji: "🚜", label: "घर से धान उठवाना है।", color: "#f97316" },
     { emoji: "🌾", label: "गेहूं बीज चाहिए", color: "#eab308" },
     { emoji: "🧑‍🌾", label: "किसान सलाह चाहिए", color: "#8b5cf6" },
     { emoji: "🌻", label: "अन्य समस्या", color: "#6b7280" },
@@ -477,7 +475,7 @@ function CropDoctorSection() {
     { emoji: "🍃", label: "रोग लग गया है", tip: "Blast, Sheath Blight या Bacterial Blight हो सकता है। तुरंत Fungicide Spray करें।" },
     { emoji: "🌿", label: "धान खरपतवार नाशक", tip: "धान में खरपतवार से फसल की पैदावार 30–50% कम हो सकती है। सही खरपतवार नाशक जल्दी डालें।" },
     { emoji: "🌾", label: "जड़ सड़न", tip: "अधिक पानी या Sheath Rot रोग हो सकता है। Carbendazim या Tricyclazole Spray लें।" },
-    { emoji: "💦", label: "First Spray पूछना है", tip: "रोपाई के 15–20 दिन बाद First Spray जरूरी है। Keshav Bhai से सही Spray Schedule लें।" },
+    { emoji: "💦", label: "DHAN First Spray पूछना है", tip: "रोपाई के 15–20 दिन बाद First Spray जरूरी है। Keshav Bhai से सही Spray Schedule लें।" },
     { emoji: "🌾", label: "धान कल्ले नहीं कर रही", tip: "कल्ले न फूटना जिंक या नाइट्रोजन की कमी का संकेत है। Zinc Sulphate + Urea Spray तुरंत करें और Keshav Bhai से सही मात्रा पूछें।" },
     { emoji: "🧪", label: "कौन सी दवाई डालें?", tip: "फसल की अवस्था और समस्या देखकर सही दवाई चुनें। WhatsApp पर फोटो भेजें — निःशुल्क सलाह पाएं।" },
   ];
@@ -563,7 +561,7 @@ function ProductsSection() {
       icon: <Scissors className="w-7 h-7" />, nameHi: "खरपतवार नाशक", nameEn: "Weed Killers",
       desc: "खेत को खरपतवार से साफ रखने के लिए प्री और पोस्ट-इमर्जेंट हर्बिसाइड।",
       accent: "#F9A825", bg: "from-[#5D4037] to-[#4E342E]",
-      subs: ["प्री-इमर्जेंट", "पोस्ट-इमर्जेंट", "घास नाशक", "चौड़ी पत्ती नाशक", "धान वीड", "अन्य"],
+      subs: ["प्री-इमर्जेंट", "पोस्ट-इमर्जेंट", "चौड़ी पत्ती नाशक", "धान वीड", "अन्य"],
     },
     {
       icon: <TreePine className="w-7 h-7" />, nameHi: "खाद", nameEn: "Fertilizers",
@@ -581,7 +579,7 @@ function ProductsSection() {
       icon: <Sprout className="w-7 h-7" />, nameHi: "धान Varieties", nameEn: "Dhan Varieties",
       desc: "1886 और PB1 सहित सभी प्रमुख हाइब्रिड धान varieties की जानकारी और बुकिंग।",
       accent: "#43A047", bg: "from-[#1B5E20] to-[#388E3C]",
-      subs: ["1886 Variety", "PB1 धान", "अन्य हाइब्रिड", "बासमती", "शॉर्ट ड्यूरेशन", "लोकल Variety"],
+      subs: ["1886 Variety", "PB1 धान", "1637 Variety", "बासमती", "शॉर्ट ड्यूरेशन", "लोकल Variety"],
     },
     {
       icon: <Users className="w-7 h-7" />, nameHi: "किसान सहायता", nameEn: "Farmer Support",
@@ -678,7 +676,7 @@ function SeasonalCropCalendarSection() {
       name: "जून", en: "June", emoji: "🌧️",
       items: [
         { label: "धान नर्सरी तैयारी", tip: "नर्सरी डालने का सही समय — बीज दर और मिट्टी तैयारी" },
-        { label: "1886 / PB1 Variety बुकिंग", tip: "इस सीजन की टॉप variety — अभी बुक करें" },
+        { label: "1886,1637 / PB1 Variety बुकिंग", tip: "इस सीजन की टॉप variety — अभी बुक करें" },
         { label: "धान बीज उपचार", tip: "बीज को फफूंदनाशक से उपचारित करें" },
         { label: "धान प्रोजेक्ट Enquiry", tip: "Annadata का धान प्रोजेक्ट क्या है — जानें" },
         { label: "🌱 सोयाबीन बुवाई तैयारी", tip: "जून अंत में सोयाबीन की बुवाई करें — JS-335, NRC-86 variety। बीज उपचार करें और सही दूरी रखें।" },
@@ -688,7 +686,7 @@ function SeasonalCropCalendarSection() {
       name: "जुलाई", en: "July", emoji: "🌱",
       items: [
         { label: "रोपाई (Transplanting)", tip: "रोपाई का सही समय और पौधे से पौधे की दूरी" },
-        { label: "First Spray Guidance", tip: "रोपाई के बाद पहला Spray — कब और क्या?" },
+        { label: "धान First Spray Guidance", tip: "रोपाई के बाद पहला Spray — कब और क्या?" },
         { label: "धान की दवाई", tip: "शुरुआती रोग से बचाव — Keshav Bhai से पूछें" },
         { label: "Growth Guidance", tip: "पौधे की बढ़वार के लिए सही खाद और दवाई" },
         { label: "🌱 सोयाबीन First Spray", tip: "सोयाबीन में बुवाई के 15–20 दिन बाद खरपतवार नाशक और पहला Fungicide Spray करें — Keshav Bhai से Spray Schedule लें।" },
@@ -698,8 +696,8 @@ function SeasonalCropCalendarSection() {
       name: "अगस्त", en: "August", emoji: "🔍",
       items: [
         { label: "रोग पहचान", tip: "पत्ता पीला, जड़ सड़न, कीट — फोटो भेजें WhatsApp पर" },
+        { label: "Fertilizer Guidance", tip: "पकाव से पहले सही खाद और उचित मात्रा" },
         { label: "कीट नियंत्रण", tip: "तना छेदक, पत्ता लपेटक कीट से बचाव" },
-        { label: "Growth Booster Spray", tip: "फसल को ताकत देने वाले ग्रोथ बूस्टर" },
         { label: "Spray Schedule", tip: "महीने भर का पूरा Spray Schedule" },
         { label: "🌱 सोयाबीन रोग नियंत्रण", tip: "सोयाबीन में पीला मोज़ेक, सर्कोस्पोरा Leaf Spot से बचाव करें। Fungicide + Insecticide Spray तुरंत करें — Keshav Bhai से सलाह लें।" },
       ]
@@ -707,8 +705,8 @@ function SeasonalCropCalendarSection() {
     {
       name: "सितंबर", en: "September", emoji: "🌾",
       items: [
-        { label: "Fertilizer Guidance", tip: "पकाव से पहले सही खाद और उचित मात्रा" },
         { label: "Disease Control", tip: "ब्लास्ट, शीथ ब्लाइट से बचाव" },
+        { label: "Growth Booster Spray", tip: "फसल को ताकत देने वाले ग्रोथ बूस्टर" },
         { label: "Crop Health Check", tip: "WhatsApp पर फोटो भेजें — निःशुल्क सलाह" },
         { label: "पकाव में सुधार", tip: "दाना भराई और पकाव बढ़ाने के उपाय" },
         { label: "🌱 सोयाबीन पकाव सलाह", tip: "सोयाबीन में दाना भरने के समय पोटाश + Boron Spray करें। पीलापन आने पर कटाई की तैयारी करें।" },
@@ -719,7 +717,7 @@ function SeasonalCropCalendarSection() {
       items: [
         { label: "कटाई तैयारी", tip: "कटाई का सही समय और मशीन की व्यवस्था" },
         { label: "धान खरीदी जानकारी", tip: "समर्थन मूल्य और खरीदी केंद्र की जानकारी" },
-        { label: "घर से धान उठवाई", tip: "Annadata की धान उठवाई सेवा — संपर्क करें" },
+        { label: "घर से धान उठवाना है।", tip: "Annadata की धान उठवाई सेवा — संपर्क करें" },
         { label: "रबी सीजन तैयारी", tip: "गेहूं-चना बीज की बुकिंग — अभी से करें" },
       ]
     },
@@ -853,7 +851,7 @@ function DhanProjectSection() {
               <select name="variety" value={form.variety} onChange={handleChange} required
                 className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white font-hindi focus:outline-none focus:border-secondary transition-colors">
                 <option value="" className="bg-gray-800">Variety चुनें</option>
-                {["1886 हाइब्रिड", "PB1 धान", "अन्य हाइब्रिड", "बासमती", "लोकल Variety"].map(v => (
+                {["1637 हाइब्रिड", "PB1 धान"].map(v => (
                   <option key={v} value={v} className="bg-gray-800">{v}</option>
                 ))}
               </select>
@@ -895,7 +893,7 @@ function DhanUthwaiSection() {
           </motion.div>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl font-hindi font-black text-white">
-            धान घर से उठवाई चाहिए?
+            घर से धान उठवाना है।?
           </motion.h2>
           <p className="text-white/60 font-hindi mt-2">Request भेजें — Keshav Bhai खुद व्यवस्था करेंगे</p>
           <motion.div initial={{ scaleX: 0 }} whileInView={{ scaleX: 1 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.8 }}
@@ -1785,7 +1783,7 @@ function ContactSection() {
               <div>
                 <h4 className="text-lg font-bold">WhatsApp पर पूछें</h4>
                 <p className="text-white/80 text-sm">तुरंत जवाब — हिंदी में</p>
-                <span className="font-bold text-white/90 text-sm font-hindi">wa.me/919691712455</span>
+                <span className="font-bold text-white/90 text-sm font-hindi">wa.me/916261737388</span>
               </div>
             </a>
 
@@ -1918,7 +1916,6 @@ function Footer() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center mb-10">
           <img src={logoPath} alt="Logo" className="w-20 h-20 rounded-full border-2 border-secondary/60 mb-5 bg-white object-contain shadow-xl" />
-          <h2 className="text-3xl font-serif font-bold text-white mb-1">ANNADATA AGRI & SEEDS</h2>
           <p className="text-secondary text-xl font-hindi font-semibold mb-2">जय जवान जय किसान</p>
           <p className="text-white/50 text-sm mb-6">Raisen Road, Trimurti Chouraha, Salamatpur, Dist. Raisen</p>
           <div className="flex flex-wrap gap-3 justify-center">
