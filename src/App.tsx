@@ -29,10 +29,6 @@ export default function App() {
           COMING SOON
         </p>
 
-        <p className="mt-8 text-lg md:text-2xl text-green-100">
-          A Premium Digital Experience Is Launching Soon
-        </p>
-
         {/* Owner Section */}
         <div className="mt-12">
           <p className="text-2xl md:text-4xl font-bold text-yellow-400">
@@ -44,22 +40,10 @@ export default function App() {
           </p>
         </div>
 
-        {/* Contact */}
-        <div className="mt-10 space-y-2">
-          <p className="text-white text-lg md:text-2xl font-semibold">
-            📞 6261737388 | 9691712455 
-          </p>
-
-          <p className="text-green-200 text-sm md:text-lg">
-            Raisen Road, Trimurti Chouraha, Salamatpur,
-            Dist. Raisen (M.P.) 464001
-          </p>
-        </div>
-
         {/* Footer */}
         <div className="mt-12">
           <p className="text-yellow-300 text-xs md:text-sm tracking-[0.2em]">
-            WEBSITE DEVELOPED BY PRIYAMXMEDIA(PRIYAM VISHWAKARMA)
+            BY PRIYAMXMEDIA(PRIYAM VISHWAKARMA)
           </p>
         </div>
       </div>
