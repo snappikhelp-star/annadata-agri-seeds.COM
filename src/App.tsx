@@ -42,7 +42,7 @@ export default function App() {
 
         {/* Footer */}
         <div className="mt-12">
-          <p className="text-yellow-300 text-xs md:text-sm tracking-[0.2em]">
+          <p className="text-2xl md:text-4xl font-bold text-yellow-400">
             BY PRIYAMXMEDIA(PRIYAM VISHWAKARMA)
           </p>
         </div>
