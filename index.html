@@ -1,8 +1,354 @@
-ANNADATA AGRI & SEEDS
+<!DOCTYPE html>
 
-🚧 Website Under Maintenance
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annadata Agri & Seeds Launch</title>
 
-हम वेबसाइट को और बेहतर बना रहे हैं।
-कृपया कुछ समय बाद पुनः आएं।
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-📞 7974821676
+body{
+    overflow:hidden;
+    background:#02140a;
+    font-family:Arial, sans-serif;
+    height:100vh;
+}
+
+.container{
+    position:relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+.bg{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#facc1530,transparent 30%),
+    radial-gradient(circle at bottom right,#22c55e40,transparent 40%),
+    linear-gradient(135deg,#02140a,#064e3b,#022c22);
+}
+
+.sun{
+    position:absolute;
+    top:10%;
+    right:10%;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:#facc15;
+    box-shadow:0 0 120px #facc15;
+    animation:sunPulse 4s infinite;
+}
+
+.field{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:35%;
+    background:linear-gradient(to top,#14532d,#22c55e55,transparent);
+    clip-path:polygon(0 50%,15% 35%,30% 55%,45% 32%,60% 50%,75% 35%,100% 48%,100% 100%,0 100%);
+}
+
+.countdown{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:180px;
+    font-weight:900;
+    color:#facc15;
+    text-shadow:0 0 50px #facc15;
+    z-index:100;
+    background:#02140a;
+}
+
+.launch-content{
+    position:relative;
+    z-index:10;
+    opacity:0;
+    max-width:1100px;
+    padding:20px;
+}
+
+.badge{
+    display:inline-block;
+    padding:12px 30px;
+    border:1px solid #facc15;
+    border-radius:50px;
+    color:#fef08a;
+    font-weight:bold;
+    letter-spacing:4px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    margin-top:25px;
+    font-size:78px;
+    font-weight:900;
+    color:#fff;
+    line-height:1.1;
+    text-shadow:0 0 30px #22c55e;
+}
+
+.logo span{
+    color:#facc15;
+}
+
+.hindi{
+    margin-top:18px;
+    font-size:34px;
+    font-weight:800;
+    color:#dcfce7;
+}
+
+.line{
+    width:0;
+    height:5px;
+    margin:25px auto;
+    border-radius:50px;
+    background:linear-gradient(90deg,#22c55e,#facc15,#fff);
+    animation:growLine 2s forwards;
+    animation-delay:6s;
+}
+
+.owner{
+    margin-top:25px;
+}
+
+.owner-label{
+    color:#d1fae5;
+    letter-spacing:4px;
+    font-size:15px;
+}
+
+.owner-name{
+    font-size:46px;
+    font-weight:900;
+    color:#facc15;
+    text-shadow:
+    0 0 15px #facc15,
+    0 0 35px #facc15,
+    0 0 70px #facc15;
+    animation:goldPulse 2s infinite;
+}
+
+.services{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.services div{
+    padding:12px 18px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:14px;
+    color:white;
+    font-weight:bold;
+}
+
+.live{
+    margin-top:30px;
+    font-size:34px;
+    font-weight:900;
+    color:#22c55e;
+    letter-spacing:4px;
+    animation:pulse 2s infinite;
+}
+
+.by{
+    margin-top:15px;
+    color:#facc15;
+    font-size:20px;
+    letter-spacing:5px;
+}
+
+.leaf{
+    position:absolute;
+    font-size:24px;
+    animation:fall 15s linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-120px) rotate(0deg);
+        opacity:0;
+    }
+    20%{opacity:1;}
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes pulse{
+    0%,100%{text-shadow:0 0 10px #22c55e;}
+    50%{text-shadow:0 0 40px #22c55e;}
+}
+
+@keyframes goldPulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+}
+
+@keyframes growLine{
+    to{
+        width:500px;
+    }
+}
+
+@keyframes sunPulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+@media(max-width:768px){
+    .logo{
+        font-size:42px;
+    }
+
+    .owner-name{
+        font-size:32px;
+    }
+
+    .hindi{
+        font-size:22px;
+    }
+
+    .live{
+        font-size:22px;
+    }
+
+    .countdown{
+        font-size:110px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="bg"></div>
+<div class="sun"></div>
+<div class="field"></div>
+
+<div class="leaf" style="left:10%;animation-delay:0s">🌾</div>
+<div class="leaf" style="left:25%;animation-delay:2s">🌱</div>
+<div class="leaf" style="left:40%;animation-delay:4s">🍃</div>
+<div class="leaf" style="left:60%;animation-delay:1s">🌾</div>
+<div class="leaf" style="left:75%;animation-delay:3s">🌱</div>
+<div class="leaf" style="left:90%;animation-delay:5s">🍃</div>
+
+<div id="countdown" class="countdown">5</div>
+
+<div id="launch" class="launch-content">
+
+<div class="badge">
+OFFICIAL WEBSITE LAUNCH
+</div>
+
+<div class="logo">
+ANNADATA <span>AGRI</span><br>
+& SEEDS
+</div>
+
+<div class="hindi">
+किसानों के भरोसे की नई डिजिटल शुरुआत
+</div>
+
+<div class="line"></div>
+
+<div class="owner">
+<div class="owner-label">
+FOUNDER & OWNER
+</div>
+
+<div class="owner-name">
+KESHAV MEENA
+</div>
+</div>
+
+<div class="services">
+<div>🌾 Premium Seeds</div>
+<div>🌱 Farming Guidance</div>
+<div>🛒 Crop Solutions</div>
+<div>📍 Salamatpur</div>
+</div>
+
+<div class="live">
+WEBSITE IS LIVE
+</div>
+
+<div class="by">
+BY PRIYAMX MEDIA
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const countdown = document.getElementById("countdown");
+const launch = document.getElementById("launch");
+
+let count = 5;
+
+const timer = setInterval(() => {
+
+count--;
+
+if(count > 0){
+
+countdown.innerHTML = count;
+
+}else{
+
+countdown.innerHTML = "🚀";
+
+setTimeout(()=>{
+
+countdown.style.display="none";
+
+launch.style.opacity="1";
+launch.style.transition="all 2s ease";
+
+},1000);
+
+clearInterval(timer);
+
+}
+
+},1000);
+
+setTimeout(()=>{
+document.body.style.filter="brightness(1.05)";
+},14000);
+
+</script>
+
+</body>
+</html>
