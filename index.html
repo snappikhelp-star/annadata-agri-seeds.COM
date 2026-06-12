@@ -1,344 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Annadata Agri & Seeds Launch</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annadata Agri & Seeds Cinematic Launch</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+body{height:100vh;overflow:hidden;background:#06150b;font-family:Arial,sans-serif;color:white}
+.scene{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#06150b,#12351d,#07180d)}
+.scene:before{content:"";position:absolute;inset:-40%;background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.12),transparent 55%);animation:sweep 30s ease forwards}
 
-body{
-  height:100vh;
-  overflow:hidden;
-  font-family:Arial, sans-serif;
-  background:#07180d;
-  color:white;
-}
+.sky{position:absolute;inset:0;background:radial-gradient(circle at 70% 18%,rgba(244,211,94,.24),transparent 22%),radial-gradient(circle at 20% 20%,rgba(34,197,94,.18),transparent 24%)}
+.sun{position:absolute;top:10%;right:12%;width:170px;height:170px;border-radius:50%;background:linear-gradient(#ffe39a,#e5a900);box-shadow:0 0 80px rgba(244,211,94,.5);animation:sun 6s infinite}
+.field{position:absolute;bottom:0;width:100%;height:36%;background:linear-gradient(to top,#0d3d1f,#207a39 55%,transparent);clip-path:polygon(0 48%,12% 38%,26% 52%,40% 35%,58% 50%,74% 36%,100% 48%,100% 100%,0 100%)}
+.horizon{position:absolute;bottom:26%;width:100%;height:120px;background:linear-gradient(to top,rgba(6,21,11,.8),transparent)}
 
-.scene{
-  position:relative;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:
-    linear-gradient(rgba(5,25,10,.35),rgba(5,25,10,.75)),
-    radial-gradient(circle at 50% 20%,rgba(255,207,79,.18),transparent 28%),
-    linear-gradient(135deg,#082414,#12351d,#07180d);
-}
+.particle{position:absolute;width:5px;height:5px;border-radius:50%;background:#f4d35e;opacity:.6;animation:float 30s linear infinite}
+.crop{position:absolute;bottom:-30px;font-size:42px;opacity:.8;animation:sway 3s ease-in-out infinite}
 
-/* cinematic moving light */
-.scene::before{
-  content:"";
-  position:absolute;
-  inset:-30%;
-  background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.14),transparent 55%);
-  transform:translateX(-70%) rotate(8deg);
-  animation:lightSweep 15s ease forwards;
-}
+.countdown-screen{position:absolute;inset:0;z-index:30;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,rgba(244,211,94,.16),transparent 35%),rgba(3,18,8,.98)}
+.count-wrap{position:relative;width:360px;height:360px;display:flex;align-items:center;justify-content:center}
+.ring{position:absolute;inset:0;border-radius:50%;border:3px solid rgba(244,211,94,.28);animation:ring 1s infinite}
+.ring:before{content:"";position:absolute;inset:22px;border-radius:50%;border:2px dashed rgba(34,197,94,.45);animation:spin 5s linear infinite}
+.ring:after{content:"";position:absolute;inset:48px;border-radius:50%;border:1px solid rgba(255,255,255,.18)}
+.number{font-size:135px;font-weight:900;color:#fff7d6;text-shadow:0 10px 30px rgba(0,0,0,.7);animation:pop 1s infinite}
+.count-text{position:absolute;bottom:40px;font-size:15px;letter-spacing:6px;color:#f4d35e;font-weight:800}
 
-/* field */
-.field{
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:34%;
-  background:
-    linear-gradient(to top,#0d3d1f,#1f7a3a 55%,transparent);
-  clip-path:polygon(0 48%,12% 38%,26% 52%,40% 35%,58% 50%,74% 36%,100% 48%,100% 100%,0 100%);
-  opacity:.95;
-}
+.content{position:relative;z-index:10;width:100%;max-width:1180px;padding:25px;opacity:0}
+.show{opacity:1}
 
-/* sun */
-.sun{
-  position:absolute;
-  top:10%;
-  right:12%;
-  width:150px;
-  height:150px;
-  border-radius:50%;
-  background:linear-gradient(#ffd86b,#f2b705);
-  box-shadow:0 0 70px rgba(242,183,5,.45);
-  opacity:.85;
-}
+.badge,.logo,.hindi,.owner-card,.services,.live,.by,.final-msg{opacity:0;transform:translateY(35px)}
+.badge{display:inline-block;padding:12px 30px;border-radius:50px;background:rgba(255,255,255,.1);border:1px solid rgba(244,211,94,.45);color:#f9eaa2;letter-spacing:4px;font-size:14px;font-weight:800;backdrop-filter:blur(14px)}
+.logo{margin-top:28px;font-size:86px;line-height:1.04;font-weight:900;letter-spacing:2px;color:#fff;text-shadow:0 8px 30px rgba(0,0,0,.7)}
+.logo span{color:#f4d35e}
+.hindi{margin-top:18px;font-size:34px;font-weight:800;color:#dff7e7}
+.line{width:0;height:4px;margin:28px auto;border-radius:40px;background:linear-gradient(90deg,transparent,#f4d35e,#22c55e,#f4d35e,transparent)}
+.owner-card{margin:0 auto;margin-top:14px;max-width:560px;padding:20px 28px;border-radius:24px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(16px);box-shadow:0 22px 70px rgba(0,0,0,.3)}
+.owner-label{font-size:13px;letter-spacing:4px;color:#b7f7c8;font-weight:800}
+.owner-name{margin-top:8px;font-size:44px;font-weight:900;color:#f4d35e;letter-spacing:2px;text-shadow:0 5px 18px rgba(0,0,0,.45)}
+.services{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.services div{padding:13px 20px;border-radius:16px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.16);font-weight:800}
+.live{margin-top:34px;font-size:36px;font-weight:900;letter-spacing:5px;color:#b7f7c8}
+.by{margin-top:14px;font-size:19px;letter-spacing:5px;color:#f4d35e;font-weight:800}
+.final-msg{margin-top:20px;font-size:22px;color:#fff7d6;font-weight:800}
 
-/* particles */
-.particle{
-  position:absolute;
-  width:4px;
-  height:4px;
-  border-radius:50%;
-  background:#f4d35e;
-  opacity:.65;
-  animation:floatUp 15s linear infinite;
-}
+.flash{position:absolute;inset:0;background:white;opacity:0;z-index:40;pointer-events:none}
 
-/* countdown */
-.countdown-screen{
-  position:absolute;
-  inset:0;
-  z-index:20;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:
-    radial-gradient(circle,rgba(255,215,100,.12),transparent 35%),
-    rgba(3,18,8,.96);
-}
+.show .badge{animation:in .9s ease forwards .2s}
+.show .logo{animation:in 1s ease forwards 2s}
+.show .hindi{animation:in 1s ease forwards 5s}
+.show .line{animation:line 1.8s ease forwards 6.5s}
+.show .owner-card{animation:in 1s ease forwards 9s}
+.show .services{animation:in 1s ease forwards 13s}
+.show .live{animation:in 1s ease forwards 18s, pulse 2s infinite 19s}
+.show .by{animation:in 1s ease forwards 22s}
+.show .final-msg{animation:in 1s ease forwards 25s}
 
-.count-wrap{
-  position:relative;
-  width:330px;
-  height:330px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.ring{
-  position:absolute;
-  inset:0;
-  border-radius:50%;
-  border:3px solid rgba(244,211,94,.25);
-  animation:ringPulse 1s ease-in-out infinite;
-}
-
-.ring::before{
-  content:"";
-  position:absolute;
-  inset:18px;
-  border-radius:50%;
-  border:2px dashed rgba(34,197,94,.45);
-  animation:spin 5s linear infinite;
-}
-
-.number{
-  font-size:135px;
-  font-weight:900;
-  color:#fff7d6;
-  text-shadow:0 8px 30px rgba(0,0,0,.6);
-  animation:numberPop 1s ease infinite;
-}
-
-.count-text{
-  position:absolute;
-  bottom:38px;
-  font-size:15px;
-  letter-spacing:5px;
-  color:#f4d35e;
-  font-weight:bold;
-}
-
-/* launch content */
-.content{
-  position:relative;
-  z-index:5;
-  max-width:1100px;
-  padding:20px;
-  opacity:0;
-  transform:translateY(35px) scale(.96);
-}
-
-.show-content{
-  animation:contentIn 1.4s ease forwards;
-}
-
-.badge{
-  display:inline-block;
-  padding:12px 28px;
-  border-radius:50px;
-  background:rgba(255,255,255,.1);
-  border:1px solid rgba(244,211,94,.45);
-  color:#f9eaa2;
-  letter-spacing:4px;
-  font-size:14px;
-  font-weight:bold;
-  backdrop-filter:blur(12px);
-}
-
-.logo{
-  margin-top:28px;
-  font-size:82px;
-  line-height:1.04;
-  font-weight:900;
-  letter-spacing:2px;
-  color:#ffffff;
-  text-shadow:0 6px 28px rgba(0,0,0,.65);
-}
-
-.logo span{
-  color:#f4d35e;
-}
-
-.hindi{
-  margin-top:18px;
-  font-size:32px;
-  font-weight:800;
-  color:#dff7e7;
-  text-shadow:0 5px 18px rgba(0,0,0,.5);
-}
-
-.line{
-  width:0;
-  height:4px;
-  margin:28px auto;
-  border-radius:40px;
-  background:linear-gradient(90deg,transparent,#f4d35e,#22c55e,#f4d35e,transparent);
-  animation:lineGrow 1.8s ease forwards;
-  animation-delay:1.3s;
-}
-
-.owner-card{
-  margin:0 auto;
-  margin-top:12px;
-  max-width:520px;
-  padding:18px 26px;
-  border-radius:22px;
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.18);
-  backdrop-filter:blur(16px);
-  box-shadow:0 20px 60px rgba(0,0,0,.25);
-}
-
-.owner-label{
-  font-size:13px;
-  letter-spacing:4px;
-  color:#b7f7c8;
-  font-weight:bold;
-}
-
-.owner-name{
-  margin-top:8px;
-  font-size:42px;
-  font-weight:900;
-  color:#f4d35e;
-  letter-spacing:2px;
-  text-shadow:0 4px 18px rgba(0,0,0,.45);
-}
-
-.services{
-  margin-top:26px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-  justify-content:center;
-}
-
-.services div{
-  padding:12px 18px;
-  border-radius:16px;
-  background:rgba(255,255,255,.11);
-  border:1px solid rgba(255,255,255,.16);
-  font-weight:bold;
-  color:#fff;
-}
-
-.live{
-  margin-top:34px;
-  font-size:32px;
-  font-weight:900;
-  letter-spacing:4px;
-  color:#b7f7c8;
-  text-shadow:0 4px 18px rgba(0,0,0,.45);
-  animation:softPulse 2s infinite;
-}
-
-.by{
-  margin-top:14px;
-  font-size:18px;
-  letter-spacing:5px;
-  color:#f4d35e;
-  font-weight:bold;
-}
-
-.flash{
-  position:absolute;
-  inset:0;
-  background:white;
-  opacity:0;
-  z-index:30;
-  pointer-events:none;
-}
-
-.flash-now{
-  animation:flash .55s ease forwards;
-}
-
-@keyframes numberPop{
-  0%{transform:scale(.6);opacity:0}
-  35%{transform:scale(1.08);opacity:1}
-  100%{transform:scale(1.25);opacity:0}
-}
-
-@keyframes ringPulse{
-  0%{transform:scale(.82);opacity:.35}
-  55%{transform:scale(1);opacity:1}
-  100%{transform:scale(1.16);opacity:0}
-}
-
-@keyframes spin{
-  to{transform:rotate(360deg)}
-}
-
-@keyframes contentIn{
-  to{opacity:1;transform:translateY(0) scale(1)}
-}
-
-@keyframes lineGrow{
-  to{width:560px}
-}
-
-@keyframes softPulse{
-  0%,100%{transform:scale(1);opacity:.9}
-  50%{transform:scale(1.04);opacity:1}
-}
-
-@keyframes flash{
-  0%{opacity:0}
-  35%{opacity:.75}
-  100%{opacity:0}
-}
-
-@keyframes lightSweep{
-  0%{transform:translateX(-80%) rotate(8deg)}
-  100%{transform:translateX(80%) rotate(8deg)}
-}
-
-@keyframes floatUp{
-  from{transform:translateY(110vh);opacity:0}
-  20%{opacity:.75}
-  to{transform:translateY(-15vh);opacity:0}
-}
+@keyframes in{to{opacity:1;transform:translateY(0)}}
+@keyframes line{to{width:600px}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+@keyframes pop{0%{transform:scale(.6);opacity:0}35%{transform:scale(1.08);opacity:1}100%{transform:scale(1.25);opacity:0}}
+@keyframes ring{0%{transform:scale(.82);opacity:.35}55%{transform:scale(1);opacity:1}100%{transform:scale(1.16);opacity:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{from{transform:translateY(110vh);opacity:0}20%{opacity:.7}to{transform:translateY(-15vh);opacity:0}}
+@keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@keyframes sun{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+@keyframes sweep{0%{transform:translateX(-80%) rotate(8deg)}100%{transform:translateX(80%) rotate(8deg)}}
+@keyframes flash{0%{opacity:0}35%{opacity:.75}100%{opacity:0}}
 
 @media(max-width:768px){
-  .count-wrap{width:240px;height:240px}
-  .number{font-size:92px}
-  .logo{font-size:42px}
-  .hindi{font-size:22px}
-  .owner-name{font-size:30px}
-  .live{font-size:22px}
-  .line{max-width:310px}
+.count-wrap{width:250px;height:250px}.number{font-size:95px}.logo{font-size:43px}.hindi{font-size:22px}.owner-name{font-size:31px}.live{font-size:23px}.line{max-width:320px}
 }
 </style>
 </head>
 
 <body>
-
 <div class="scene">
-
+  <div class="sky"></div>
   <div class="sun"></div>
+  <div class="horizon"></div>
   <div class="field"></div>
+
+  <div class="crop" style="left:6%">🌾</div>
+  <div class="crop" style="left:18%;animation-delay:.5s">🌱</div>
+  <div class="crop" style="left:32%;animation-delay:1s">🌾</div>
+  <div class="crop" style="left:48%;animation-delay:.2s">🌱</div>
+  <div class="crop" style="left:64%;animation-delay:.8s">🌾</div>
+  <div class="crop" style="left:80%;animation-delay:1.2s">🌱</div>
+  <div class="crop" style="left:93%;animation-delay:.4s">🌾</div>
 
   <div class="particle" style="left:8%;animation-delay:0s"></div>
   <div class="particle" style="left:18%;animation-delay:2s"></div>
-  <div class="particle" style="left:31%;animation-delay:4s"></div>
+  <div class="particle" style="left:30%;animation-delay:4s"></div>
   <div class="particle" style="left:45%;animation-delay:1s"></div>
-  <div class="particle" style="left:59%;animation-delay:3s"></div>
-  <div class="particle" style="left:72%;animation-delay:5s"></div>
+  <div class="particle" style="left:60%;animation-delay:3s"></div>
+  <div class="particle" style="left:73%;animation-delay:5s"></div>
   <div class="particle" style="left:86%;animation-delay:2.5s"></div>
-  <div class="particle" style="left:94%;animation-delay:4.5s"></div>
+  <div class="particle" style="left:95%;animation-delay:4.5s"></div>
 
   <div id="countdownScreen" class="countdown-screen">
     <div class="count-wrap">
@@ -353,10 +112,7 @@ body{
   <div id="content" class="content">
     <div class="badge">OFFICIAL WEBSITE LAUNCH</div>
 
-    <div class="logo">
-      ANNADATA <span>AGRI</span><br>
-      & SEEDS
-    </div>
+    <div class="logo">ANNADATA <span>AGRI</span><br>& SEEDS</div>
 
     <div class="hindi">किसानों के भरोसे की नई डिजिटल शुरुआत</div>
 
@@ -376,46 +132,37 @@ body{
 
     <div class="live">WEBSITE IS LIVE</div>
     <div class="by">BY PRIYAMX MEDIA</div>
+    <div class="final-msg">A new digital journey for farmers begins now</div>
   </div>
-
 </div>
 
 <script>
-const countdownScreen = document.getElementById("countdownScreen");
-const countNumber = document.getElementById("countNumber");
-const content = document.getElementById("content");
-const flash = document.getElementById("flash");
+const countdownScreen=document.getElementById("countdownScreen");
+const countNumber=document.getElementById("countNumber");
+const content=document.getElementById("content");
+let count=5;
 
-let count = 5;
-
-const timer = setInterval(() => {
+const timer=setInterval(()=>{
   count--;
-
-  if(count > 0){
-    countNumber.textContent = count;
-    countNumber.style.animation = "none";
+  if(count>0){
+    countNumber.textContent=count;
+    countNumber.style.animation="none";
     void countNumber.offsetWidth;
-    countNumber.style.animation = "numberPop 1s ease infinite";
-  } else {
-    countNumber.textContent = "GO";
-    countNumber.style.fontSize = "95px";
-
-    setTimeout(() => {
-      flash.classList.add("flash-now");
-      countdownScreen.style.transition = "opacity .7s ease";
-      countdownScreen.style.opacity = "0";
-
-      setTimeout(() => {
-        countdownScreen.style.display = "none";
-        content.classList.add("show-content");
-      }, 650);
-
-    }, 700);
-
+    countNumber.style.animation="pop 1s infinite";
+  }else{
+    countNumber.textContent="GO";
+    countNumber.style.fontSize="95px";
+    setTimeout(()=>{
+      countdownScreen.style.transition="opacity .8s ease";
+      countdownScreen.style.opacity="0";
+      setTimeout(()=>{
+        countdownScreen.style.display="none";
+        content.classList.add("show");
+      },800);
+    },700);
     clearInterval(timer);
   }
-}, 1000);
+},1000);
 </script>
-
 </body>
 </html>
